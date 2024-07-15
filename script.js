@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const products = [
         {
-            "title": "Smallpanels",
+            "title": "Panelboards",
             "revenue": 30697926.66,
             "image": "https://www.iemfg.com/sites/default/files/2023-12/pannelboards.png",
             "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
