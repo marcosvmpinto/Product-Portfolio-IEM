@@ -103,4 +103,24 @@ document.addEventListener("DOMContentLoaded", function() {
         data: data,
         options: options
     });
+
+    ctx.canvas.addEventListener('mousemove', function(event) {
+        const points = pieChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, false);
+        if (points.length) {
+            const index = points[0].index;
+            const product = products[index];
+            productImage.src = product.image;
+            productImage.alt = product.title;
+            productImage.style.display = 'block';
+            const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
+            revenueInfo.innerHTML = `<strong>Product Name:</strong> ${product.title}<br>
+                                     <strong>Revenue:</strong> $${product.revenue.toLocaleString()}<br>
+                                     <strong>Description:</strong> <span id="product-description">${product.description}</span>`;
+        } else {
+            productImage.style.display = 'none';
+            revenueInfo.innerHTML = `<strong>Product Name:</strong> N/A<br>
+                                     <strong>Revenue:</strong> $0<br>
+                                     <strong>Description:</strong> <span id="product-description"></span>`;
+        }
+    });
 });
