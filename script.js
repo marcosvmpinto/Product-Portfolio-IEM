@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             "title": "Medium Voltage Switchgear",
             "revenue": 463568,
-            "image": "https://www.iemfg.com/wp-content/uploads/2020/07/medium-voltage-switchgear.jpg",
-            "link": "https://www.iemfg.com/wp-content/uploads/2020/07/Medium-Voltage-Switchgear-Datasheet.pdf"
+            "image": "https://www.iemfg.com/sites/default/files/2023-12/metlaclad_MV_Switchgear.png",
+            "link": "https://www.iemfg.com/sites/default/files/2023-12/MV%20Switchgear%20Metal%20Clad.pdf"
         },
         {
             "title": "C&I Low Voltage",
