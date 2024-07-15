@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "title": "Low Voltage",
             "revenue": 283943585.89,
             "image": "https://www.iemfg.com/sites/default/files/2023-12/switchboards.png",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/ULLV%20Switchboard.pdf",
+            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
             "description": "Reliable and efficient low voltage switchboards for various applications."
         },
         {
@@ -70,7 +70,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (elements.length > 0) {
                 const index = elements[0].index;
                 const product = products[index];
+                console.log("Hovered product:", product); // Logging the hovered product
                 productImage.src = product.image;
+                console.log("Product image URL:", product.image); // Logging the image URL
                 productImage.style.display = 'block';
                 const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
                 revenueInfo.innerHTML = `<strong>Product Name:</strong> ${product.title}<br>
@@ -78,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                          <strong>Revenue %:</strong> ${percent}%<br>
                                          <strong>Description:</strong> <span id="product-description">${product.description}</span>`;
             } else {
+                console.log("No product hovered"); // Logging when no product is hovered
                 productImage.style.display = 'none';
                 revenueInfo.innerHTML = `<strong>Product Name:</strong> N/A<br>
                                          <strong>Revenue:</strong> $0<br>
