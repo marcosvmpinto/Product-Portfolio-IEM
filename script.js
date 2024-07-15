@@ -86,6 +86,16 @@ document.addEventListener("DOMContentLoaded", function() {
                                          <strong>Revenue %:</strong> 0%<br>
                                          <strong>Description:</strong> <span id="product-description"></span>`;
             }
+        },
+        onHover: function(event, activeElements) {
+            if (activeElements.length > 0) {
+                const index = activeElements[0].index;
+                pieChart.data.datasets[0].backgroundColor[index] = `hsla(${index * 360 / products.length}, 100%, 50%, 0.8)`;
+                pieChart.update();
+            } else {
+                pieChart.data.datasets[0].backgroundColor = products.map((_, index) => `hsla(${index * 360 / products.length}, 100%, 70%, 0.6)`);
+                pieChart.update();
+            }
         }
     };
 
