@@ -1,36 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
     const products = [
         {
-            "title": "Vesta-Arc Resistant Switch Gear",
-            "revenue": 277916,
-            "image": "https://www.iemfg.com/sites/default/files/2023-12/vesta-ar_0.png",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/VESTA-AR%20%28no%2040-50kA%29_0.pdf",
-            "description": "Medium Voltage Metal-Clad Arc-Resistant Switchgear with advanced safety features."
+            "title": "Smallpanels",
+            "revenue": 30697926.66,
+            "image": "https://www.iemfg.com/sites/default/files/2023-12/pannelboards.png",
+            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
+            "description": "Smallpanels for efficient electrical distribution."
         },
         {
-            "title": "Low Voltage Switchboards",
-            "revenue": 462304,
+            "title": "Low Voltage",
+            "revenue": 283943585.89,
             "image": "https://www.iemfg.com/sites/default/files/2023-12/switchboards.png",
             "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
             "description": "Reliable and efficient low voltage switchboards for various applications."
         },
         {
-            "title": "Panelboard",
-            "revenue": 446386,
-            "image": "https://www.iemfg.com/sites/default/files/2023-12/pannelboards.png",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
-            "description": "Versatile and durable panelboards for electrical distribution."
-        },
-        {
-            "title": "Medium Voltage Switchgear",
-            "revenue": 463568,
+            "title": "Medium Voltage",
+            "revenue": 28833469.60,
             "image": "https://www.iemfg.com/sites/default/files/2023-12/metlaclad_MV_Switchgear.png",
             "link": "https://www.iemfg.com/sites/default/files/2023-12/MV%20Switchgear%20Metal%20Clad.pdf",
             "description": "High-performance medium voltage switchgear for demanding environments."
         },
         {
-            "title": "C&I Low Voltage",
-            "revenue": 140128,
+            "title": "Others",
+            "revenue": 5015842.37,
             "image": "https://www.iemfg.com/sites/default/files/2023-12/Product_CustAssem.png",
             "link": "https://www.iemfg.com/sites/default/files/2023-12/Custom%20Assemblies_0.pdf",
             "description": "Custom industrial low voltage solutions for various needs."
