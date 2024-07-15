@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "title": "Low Voltage",
             "revenue": 283943585.89,
             "image": "https://www.iemfg.com/sites/default/files/2023-12/switchboards.png",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/ULLV%20Switchboard.pdf",
+            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
             "description": "Reliable and efficient low voltage switchboards for various applications."
         },
         {
