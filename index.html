@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #pie-chart {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #product-image {
+            display: none;
+            position: absolute;
+            width: 150px;
+            height: auto;
+            border: 1px solid #ccc;
+            background: #fff;
+            padding: 5px;
+            z-index: 10;
+        }
+        canvas {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="pie-chart"></canvas>
+    <img id="product-image" src="" alt="Product Image">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
