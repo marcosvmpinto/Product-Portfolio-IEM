@@ -9,26 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             "title": "Low Voltage Switchboards",
             "revenue": 462304,
-            "image": "https://www.iemfg.com/wp-content/uploads/2020/07/low-voltage-switchboards.jpg",
-            "link": "https://www.iemfg.com/wp-content/uploads/2020/07/Low-Voltage-Switchboards-Datasheet.pdf"
+            "image": "https://www.iemfg.com/sites/default/files/2023-12/switchboards.png",
+            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf"
         },
         {
-            "title": "PIE Panelboard",
+            "title": "Panelboard",
             "revenue": 446386,
-            "image": "https://www.iemfg.com/wp-content/uploads/2020/07/pie-panelboard.jpg",
-            "link": "https://www.iemfg.com/wp-content/uploads/2020/07/PIE-Panelboard-Datasheet.pdf"
-        },
-        {
-            "title": "PIU Panelboard",
-            "revenue": 285144,
-            "image": "https://www.iemfg.com/wp-content/uploads/2020/07/piu-panelboard.jpg",
-            "link": "https://www.iemfg.com/wp-content/uploads/2020/07/PIU-Panelboard-Datasheet.pdf"
-        },
-        {
-            "title": "CDP Panelboard",
-            "revenue": 257057,
-            "image": "https://www.iemfg.com/wp-content/uploads/2020/07/cdp-panelboard.jpg",
-            "link": "https://www.iemfg.com/wp-content/uploads/2020/07/CDP-Panelboard-Datasheet.pdf"
+            "image": "https://www.iemfg.com/sites/default/files/2023-12/pannelboards.png",
+            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf"
         },
         {
             "title": "Medium Voltage Switchgear",
@@ -39,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             "title": "C&I Low Voltage",
             "revenue": 140128,
-            "image": "https://www.iemfg.com/wp-content/uploads/2020/07/ci-low-voltage.jpg",
-            "link": "https://www.iemfg.com/wp-content/uploads/2020/07/CI-Low-Voltage-Datasheet.pdf"
+            "image": "https://www.iemfg.com/sites/default/files/2023-12/Product_CustAssem.png",
+            "link": "https://www.iemfg.com/sites/default/files/2023-12/Custom%20Assemblies_0.pdf"
         }
     ];
 
