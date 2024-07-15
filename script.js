@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const revenueInfo = document.getElementById('revenue-info');
     const productName = document.getElementById('product-name');
     const productDescription = document.getElementById('product-description');
-    const revenuePercent = document.getElementById('revenue-percent');
 
     const totalRevenue = products.reduce((sum, product) => sum + product.revenue, 0);
 
@@ -77,14 +76,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
                 revenueInfo.innerHTML = `<strong>Product Name:</strong> ${product.title}<br>
                                          <strong>Revenue:</strong> $${product.revenue.toLocaleString()}<br>
-                                         <strong>Revenue %:</strong> ${percent}%<br>
                                          <strong>Description:</strong> <span id="product-description">${product.description}</span>`;
             } else {
                 console.log("No product hovered"); // Logging when no product is hovered
                 productImage.style.display = 'none';
                 revenueInfo.innerHTML = `<strong>Product Name:</strong> N/A<br>
                                          <strong>Revenue:</strong> $0<br>
-                                         <strong>Revenue %:</strong> 0%<br>
                                          <strong>Description:</strong> <span id="product-description"></span>`;
             }
         },
