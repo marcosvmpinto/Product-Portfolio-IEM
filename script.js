@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "revenue": 5015842.37,
             "image": "https://www.iemfg.com/sites/default/files/2023-12/Product_CustAssem.png",
             "link": "https://www.iemfg.com/sites/default/files/2023-12/Custom%20Assemblies_0.pdf",
-            "description": "Control, Field Interconnection, Miscellaneous parts, etc."
+            "description": "Control Panel, Field Interconnection, Miscellaneous parts, etc."
         }
     ];
 
