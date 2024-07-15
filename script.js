@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "revenue": 5015842.37,
             "image": "https://work.iemfg.com/attachment/ArchiveExtras/122000/122393/line%2012//IMG_4681.JPG",
             "link": "https://www.iemfg.com/sites/default/files/2023-12/Custom%20Assemblies_0.pdf",
-            "description": "Custom industrial low voltage solutions for various needs."
+            "description": "Control, Field Interconnection, Miscellaneous parts, etc."
         }
     ];
 
