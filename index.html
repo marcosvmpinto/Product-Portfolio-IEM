@@ -72,6 +72,11 @@
         <img id="product-image" src="" alt="Product Image">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js?v=1.0"></script> <!-- Cache busting -->
+    <script>
+        // Appending a unique query parameter with the current timestamp to the script URL
+        const script = document.createElement('script');
+        script.src = `script.js?v=${new Date().getTime()}`;
+        document.body.appendChild(script);
+    </script>
 </body>
 </html>
