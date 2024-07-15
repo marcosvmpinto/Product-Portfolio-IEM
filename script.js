@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             "title": "Others",
             "revenue": 5015842.37,
-            "image": "https://cdn11.bigcommerce.com/s-htnyngf/product_images/uploaded_images/electrical-parts-mb.jpg",
+            "image": "https://www.iemfg.com/sites/default/files/2023-12/Product_CustAssem.png",
             "link": "https://www.iemfg.com/sites/default/files/2023-12/Custom%20Assemblies_0.pdf",
             "description": "Control, Field Interconnection, Miscellaneous parts, etc."
         }
