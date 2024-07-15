@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (elements.length > 0) {
                 const index = elements[0].index;
                 const product = products[index];
-                console.log("Hovered product:", product); // Logging the hovered product
                 productImage.src = product.image;
                 productImage.style.display = 'block';
                 const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
@@ -79,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
                                          <strong>Revenue %:</strong> ${percent}%<br>
                                          <strong>Description:</strong> <span id="product-description">${product.description}</span>`;
             } else {
-                console.log("No product hovered"); // Logging when no product is hovered
                 productImage.style.display = 'none';
                 revenueInfo.innerHTML = `<strong>Product Name:</strong> N/A<br>
                                          <strong>Revenue:</strong> $0<br>
