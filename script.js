@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.open(products[index].link, '_blank');
             }
         },
-        onHover: function(event, activeElements) {
-            if (activeElements.length > 0) {
-                const index = activeElements[0].index;
+        onHover: (event, elements) => {
+            if (elements.length > 0) {
+                const index = elements[0].index;
                 const product = products[index];
                 productImage.src = product.image;
                 productImage.alt = product.title;
