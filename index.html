@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,33 +7,72 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-        }
-        #pie-chart {
-            width: 400px;
-            height: 400px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px;
+            height: 100vh;
             position: relative;
         }
-        #product-image {
-            display: none;
+        .logo {
             position: absolute;
-            width: 150px;
+            top: 10px; /* Adjusted position */
+            left: 10px;
+            width: 250px; /* Adjusted size */
+            height: auto;
+        }
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            position: absolute;
+            bottom: 110px; /* Adjusted position */
+            left: 10px;
+        }
+        .chart-container canvas {
+            max-width: 100%;
+        }
+        .revenue-info {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            position: absolute;
+            top: 170px; /* Adjusted position */
+            left: 10px;
+        }
+        .image-container {
+            width: 65%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 35%;
+        }
+        .image-container img {
+            max-width: 100%;
             height: auto;
             border: 1px solid #ccc;
-            background: #fff;
-            padding: 5px;
-            z-index: 10;
-        }
-        canvas {
-            max-width: 600px;
-            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <canvas id="pie-chart"></canvas>
-    <img id="product-image" src="" alt="Product Image">
+    <img src="https://media.licdn.com/dms/image/C4D0BAQFvxOX0tsAomg/company-logo_200_200/0/1631356182195?e=2147483647&v=beta&t=2l_uwx_TZK5aF7HB2L2WPgWLqWHrwFmaUL_y_pU-16A" alt="Company Logo" class="logo">
+    <div class="chart-container">
+        <canvas id="pie-chart"></canvas>
+    </div>
+    <div class="revenue-info" id="revenue-info">
+        <strong>Product Name:</strong> <span id="product-name">N/A</span><br>
+        <strong>Revenue:</strong> $0<br>
+        <strong>Revenue %:</strong> <span id="revenue-percent">0%</span><br>
+        <strong>Description:</strong> <span id="product-description"></span>
+    </div>
+    <div class="image-container">
+        <img id="product-image" src="" alt="Product Image">
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=1.0"></script> <!-- Cache busting -->
 </body>
 </html>
