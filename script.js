@@ -65,33 +65,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.open(products[index].link, '_blank');
             }
         },
-        onHover: (event, elements) => {
-            if (elements.length > 0) {
-                const index = elements[0].index;
+        onHover: function(event, activeElements) {
+            if (activeElements.length > 0) {
+                const index = activeElements[0].index;
                 const product = products[index];
-                console.log("Hovered product:", product); // Logging the hovered product
                 productImage.src = product.image;
-                productImage.alt = product.title; // Update alt text for debugging
-                console.log("Product image URL:", product.image); // Logging the image URL
+                productImage.alt = product.title;
                 productImage.style.display = 'block';
                 const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
                 revenueInfo.innerHTML = `<strong>Product Name:</strong> ${product.title}<br>
                                          <strong>Revenue:</strong> $${product.revenue.toLocaleString()}<br>
-                                         <strong>Description:</strong> <span id="product-description">${product.description}</span>`;
-            } else {
-                console.log("No product hovered"); // Logging when no product is hovered
-                productImage.style.display = 'none';
-                revenueInfo.innerHTML = `<strong>Product Name:</strong> N/A<br>
-                                         <strong>Revenue:</strong> $0<br>
-                                         <strong>Description:</strong> <span id="product-description"></span>`;
-            }
-        },
-        onHover: function(event, activeElements) {
-            if (activeElements.length > 0) {
-                const index = activeElements[0].index;
+                                         <strong>Description:</strong> ${product.description}`;
                 pieChart.data.datasets[0].backgroundColor[index] = `hsla(${index * 360 / products.length}, 100%, 50%, 0.8)`;
                 pieChart.update();
             } else {
+                productImage.style.display = 'none';
+                revenueInfo.innerHTML = `<strong>Product Name:</strong> N/A<br>
+                                         <strong>Revenue:</strong> $0<br>
+                                         <strong>Description:</strong>`;
                 pieChart.data.datasets[0].backgroundColor = products.map((_, index) => `hsla(${index * 360 / products.length}, 100%, 70%, 0.6)`);
                 pieChart.update();
             }
@@ -115,12 +106,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
             revenueInfo.innerHTML = `<strong>Product Name:</strong> ${product.title}<br>
                                      <strong>Revenue:</strong> $${product.revenue.toLocaleString()}<br>
-                                     <strong>Description:</strong> <span id="product-description">${product.description}</span>`;
+                                     <strong>Description:</strong> ${product.description}`;
         } else {
             productImage.style.display = 'none';
             revenueInfo.innerHTML = `<strong>Product Name:</strong> N/A<br>
                                      <strong>Revenue:</strong> $0<br>
-                                     <strong>Description:</strong> <span id="product-description"></span>`;
+                                     <strong>Description:</strong>`;
         }
     });
 });
