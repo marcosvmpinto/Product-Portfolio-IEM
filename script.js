@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const product = products[index];
                 console.log("Hovered product:", product); // Logging the hovered product
                 productImage.src = product.image;
+                productImage.alt = product.title; // Update alt text for debugging
                 console.log("Product image URL:", product.image); // Logging the image URL
                 productImage.style.display = 'block';
                 const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
