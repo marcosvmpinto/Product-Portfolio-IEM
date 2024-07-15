@@ -1,79 +1,78 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const products = [
-        {
-            "title": "Panelboards",
-            "revenue": 30697926.66,
-            "image": "https://www.iemfg.com/sites/default/files/2023-12/pannelboards.png",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
-            "description": "Panelboards for efficient electrical distribution."
-        },
-        {
-            "title": "Low Voltage",
-            "revenue": 283943585.89,
-            "image": "https://www.iemfg.com/sites/default/files/2023-12/switchboards.png",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/Panelboards.pdf",
-            "description": "Reliable and efficient low voltage switchboards for various applications."
-        },
-        {
-            "title": "Medium Voltage",
-            "revenue": 28833469.60,
-            "image": "https://www.iemfg.com/sites/default/files/2023-12/metlaclad_MV_Switchgear.png",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/MV%20Switchgear%20Metal%20Clad.pdf",
-            "description": "High-performance medium voltage switchgear for demanding environments."
-        },
-        {
-            "title": "Others",
-            "revenue": 5015842.37,
-            "image": "https://work.iemfg.com/attachment/ArchiveExtras/122000/122393/line%2012//IMG_4681.JPG",
-            "link": "https://www.iemfg.com/sites/default/files/2023-12/Custom%20Assemblies_0.pdf",
-            "description": "Custom industrial low voltage solutions for various needs."
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px;
+            height: 100vh;
+            position: relative;
         }
-    ];
-
-    const ctx = document.getElementById('pie-chart').getContext('2d');
-    const productImage = document.getElementById('product-image');
-    const revenueInfo = document.getElementById('revenue-info');
-    const productName = document.getElementById('product-name');
-    const productDescription = document.getElementById('product-description');
-    const revenuePercent = document.getElementById('revenue-percent');
-
-    const totalRevenue = products.reduce((sum, product) => sum + product.revenue, 0);
-
-    const data = {
-        labels: products.map(product => product.title),
-        datasets: [{
-            data: products.map(product => product.revenue),
-            backgroundColor: products.map((_, index) => `hsla(${index * 360 / products.length}, 100%, 70%, 0.6)`),
-            hoverBackgroundColor: products.map((_, index) => `hsla(${index * 360 / products.length}, 100%, 50%, 0.8)`)
-        }]
-    };
-
-    const options = {
-        plugins: {
-            tooltip: {
-                callbacks: {
-                    label: function(context) {
-                        const value = context.raw;
-                        const percent = ((value / totalRevenue) * 100).toFixed(2);
-                        return `${context.label}: $${value.toLocaleString()} (${percent}%)`;
-                    }
-                }
-            }
-        },
-        onClick: (event, elements) => {
-            if (elements.length > 0) {
-                const index = elements[0].index;
-                window.open(products[index].link, '_blank');
-            }
-        },
-        onHover: (event, elements) => {
-            if (elements.length > 0) {
-                const index = elements[0].index;
-                const product = products[index];
-                console.log("Hovered product:", product); // Logging the hovered product
-                productImage.src = product.image;
-                console.log("Product image URL:", product.image); // Logging the image URL
-                productImage.style.display = 'block';
-                const percent = ((product.revenue / totalRevenue) * 100).toFixed(2);
-                revenueInfo.innerHTML = `<strong>Product Name:</strong> ${product.title}<br>
-                                         <strong
+        .logo {
+            position: absolute;
+            top: 10px; /* Adjusted position */
+            left: 10px;
+            width: 250px; /* Adjusted size */
+            height: auto;
+        }
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            position: absolute;
+            bottom: 110px; /* Adjusted position */
+            left: 10px;
+        }
+        .chart-container canvas {
+            max-width: 100%;
+        }
+        .revenue-info {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            position: absolute;
+            top: 170px; /* Adjusted position */
+            left: 10px;
+        }
+        .image-container {
+            width: 65%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 35%;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media.licdn.com/dms/image/C4D0BAQFvxOX0tsAomg/company-logo_200_200/0/1631356182195?e=2147483647&v=beta&t=2l_uwx_TZK5aF7HB2L2WPgWLqWHrwFmaUL_y_pU-16A" alt="Company Logo" class="logo">
+    <div class="chart-container">
+        <canvas id="pie-chart"></canvas>
+    </div>
+    <div class="revenue-info" id="revenue-info">
+        <strong>Product Name:</strong> <span id="product-name">N/A</span><br>
+        <strong>Revenue:</strong> $0<br>
+        <strong>Revenue %:</strong> <span id="revenue-percent">0%</span><br>
+        <strong>Description:</strong> <span id="product-description"></span>
+    </div>
+    <div class="image-container">
+        <img id="product-image" src="" alt="Product Image">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js?v=1.0"></script> <!-- Cache busting -->
+</body>
+</html>
